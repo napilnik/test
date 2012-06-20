@@ -1,0 +1,13 @@
+>>require "stripe"
+Stripe.api_key = "UurTnzJgaftqnicwnIACKBh8pPVoAXKa"
+Stripe::Charge.create(
+  :amount => 400,
+  :currency => "usd",
+  :card => {
+    :number => "4242424242424242",
+    :exp_month => 6,
+    :exp_year => 2013,
+    :cvc => 314
+  },
+  :description => "Charge for ks_rew@mail.ru"
+)
